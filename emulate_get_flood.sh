@@ -46,4 +46,4 @@ for i in $workers ; do
    done
 done
 
-sleep $time && echo "Terminating all workers" && killall bash $0
+sleep $time && echo "Terminating all workers" && killall bash
