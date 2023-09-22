@@ -36,7 +36,7 @@ run_curl() {
      done
 }
 
-tput setaf 6 ; echo "[+] Starting load test with $1 workers for $time seconds. `tput setaf 5; date`"
+tput setaf 6 ; echo "[+] Starting load test with $workers workers for $time seconds. `tput setaf 5; date`"
 for i in $workers ; do
    for worker in `seq $workers`; do
       run_curl $i & PID="$!"
