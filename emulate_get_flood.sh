@@ -5,7 +5,7 @@ usage() {
 }
 
 IFS=$'\n'
-url="http://192.168.102.105"
+#url="http://192.168.102.105"
 agents_list="full.txt"
 
 while getopts "x:t:u:" arg; do
