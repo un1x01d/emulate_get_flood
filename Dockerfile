@@ -4,8 +4,8 @@ ARG GIT_REPO="https://github.com/un1x01d/emulate_get_flood.git"
 
 ENV URL="http://192.168.102.1"
 
-ENV THREADS=10
-ENV TIMEOUT=10
+ENV THREADS=100
+ENV TIMEOUT=1000
 ENV TERM="xterm"
 
 RUN apk update && apk upgrade 
