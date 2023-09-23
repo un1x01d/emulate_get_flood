@@ -5,7 +5,7 @@ usage() {
 }
 
 IFS=$'\n'
-url="http://192.168.102.105"
+#url="http://192.168.102.105"
 agents_list="full.txt"
 
 while getopts "x:t:u:" arg; do
@@ -30,7 +30,7 @@ if [ -z $url ] || [ -z $time ]; then
 fi
 
 run_curl() {
-     for job in `sort -R $agents_list | head -$(wc -l $agents_list| awk '{print $1}')` ;do
+     for job in `sort -R $agents_list | head -$(wc -l $agents_list| awk '{print $1}')` ; do
 	     curl --silent --output /dev/null --header \
           "X-Forwarded-for: $((RANDOM % 256)).$((RANDOM % 256)).$((RANDOM % 256)).$((RANDOM % 256))" -A $job $url 
      done
