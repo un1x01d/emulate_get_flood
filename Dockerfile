@@ -2,7 +2,7 @@ FROM alpine
 
 ARG GIT_REPO="https://github.com/un1x01d/emulate_get_flood.git"
 
-ARG URL="http://192.168.102.1"
+ENV URL="http://192.168.102.1"
 
 ENV THREADS=10
 ENV TIMEOUT=10
@@ -22,4 +22,4 @@ WORKDIR emulate_get_flood
 
 RUN chmod +x emulate_get_flood.sh
 
-CMD ./emulate_get_flood.sh -x ${THREADS} -t ${TIMEOUT} -u ${URL}
+CMD ./emulate_get_flood.sh -x ${THREADS} -t ${TIMEOUT}
