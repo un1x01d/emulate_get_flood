@@ -22,4 +22,4 @@ WORKDIR emulate_get_flood
 
 RUN chmod +x emulate_get_flood.sh
 
-CMD ./emulate_get_flood.sh -x ${THREADS} -t ${TIMEOUT} -u $URL
+CMD ./emulate_get_flood.sh -x ${THREADS} -t ${TIMEOUT} -u ${URL}
